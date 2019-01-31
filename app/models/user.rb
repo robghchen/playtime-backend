@@ -15,12 +15,6 @@ class User < ApplicationRecord
   has_many :player_posts, class_name: :Post, foreign_key: :friend_id
   has_many :players, through: :player_posts, source: :player
 
-  # has_many :posts, foreign_key: :player_id
-  # has_many :posts, foreign_key: :friend_id
-
-  # has_many :players, through: :posts, source: :player
-  # has_many :friends, through: :posts, source: :friend
-
-  has_many :comments, dependent: :destroy
-  has_many :comments, through: :posts
+  has_many :player_post_comments, through: :player_posts, dependent: :destroy
+  has_many :friend_post_comments, through: :friend_posts, dependent: :destroy
 end

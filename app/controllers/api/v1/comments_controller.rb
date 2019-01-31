@@ -30,7 +30,7 @@ class Api::V1::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:like).permit(:user_id, :post_id)
+    params.require(:comment).permit(:player_post_id, :friend_post_id, :comment)
   end
 
   def find_comment
