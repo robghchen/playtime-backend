@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   # before_action :authorized
+  # commment out to temporarily disable auth
 
   def issue_token(payload)
     JWT.encode(payload, 'ja2siDc3kJ')
