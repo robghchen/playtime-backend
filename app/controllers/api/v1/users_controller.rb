@@ -13,7 +13,7 @@ class Api::V1::UsersController < ApplicationController
 end
 
   def create
-    @user = User.create(username: params[:username], password: params[:password])
+    @user = User.create(username: params[:username], first_name: params[:first_name], last_name: params[last_name], password: params[:password])
     if @user.valid?
       @token = JWT.encode({username: @user.username}, 'ja2siDc3kJ')
       render json: { user: @user, jwt: @token }, status: :created

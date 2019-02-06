@@ -9,7 +9,7 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create(comment_params)
+    @comment = Comment.create(user_id: params[:user_id], post_id: params[:post_id], comment: params[:comment])
     render json: @comment, status: :accepted
   end
 
