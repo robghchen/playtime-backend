@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_06_150252) do
+ActiveRecord::Schema.define(version: 2019_02_08_170619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2019_02_06_150252) do
     t.integer "speed"
     t.string "profile_img"
     t.string "cover_img"
+    t.integer "exp_limit"
   end
 
 end
