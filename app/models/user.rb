@@ -16,4 +16,7 @@ class User < ApplicationRecord
   has_many :players, through: :player_posts, source: :player
 
   has_many :comments, dependent: :destroy
+
+  has_many :activities
+  has_many :friends
 end
