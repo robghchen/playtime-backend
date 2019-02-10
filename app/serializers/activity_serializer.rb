@@ -2,5 +2,5 @@ class ActivitySerializer < ActiveModel::Serializer
 
   belongs_to :user
 
-  attributes :id, :task, :created_at
+  attributes :id, :user_id, :task, :created_at
 end

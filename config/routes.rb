@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post '/login', to: 'auth#create'
       resources :posts, only: [:index, :create, :update, :destroy]
       resources :comments, only: [:index, :create, :update, :destroy]
+      resources :activities, only: [:index, :create, :update, :destroy]
     end
   end
 end
