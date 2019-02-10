@@ -23,7 +23,7 @@ end
   end
 
   def update
-    @user.update(username: params[:username], password: params[:password])
+    @user.update(username: params[:username])
     if @user.save
       render json: @user, status: :accepted
     else
