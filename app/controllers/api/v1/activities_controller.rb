@@ -9,7 +9,7 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def create
-    @activity = Activity.create(user_id: params[:user_id], task: params[:task])
+    @activity = Activity.create(activity_params)
     render json: @activity, status: :accepted
   end
 
@@ -30,7 +30,7 @@ class Api::V1::ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:user_id, :task)
+    params.require(:activity).permit(:player_id, :friend_id, :task)
   end
 
   def find_activity
