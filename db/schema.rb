@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_10_222246) do
+ActiveRecord::Schema.define(version: 2019_02_12_154635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,7 +64,6 @@ ActiveRecord::Schema.define(version: 2019_02_10_222246) do
     t.integer "exp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "friends", default: [], array: true
     t.integer "lvl"
     t.integer "energy"
     t.integer "max_energy"
