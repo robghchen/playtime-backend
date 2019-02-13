@@ -8,7 +8,8 @@ Rails.application.routes.draw do
       resources :posts, only: [:index, :create, :update, :destroy]
       resources :comments, only: [:index, :create, :update, :destroy]
       resources :activities, only: [:index, :create, :update, :destroy]
-      resources :streaks, only: [:index, :create, :update, :destroy]
+      resources :tasks, only: [:index, :create, :update, :destroy]
+
     end
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_154635) do
+ActiveRecord::Schema.define(version: 2019_02_13_150639) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,17 @@ ActiveRecord::Schema.define(version: 2019_02_12_154635) do
     t.index ["activity_id"], name: "index_streaks_on_activity_id"
   end
 
+  create_table "tasks", force: :cascade do |t|
+    t.integer "post_count"
+    t.integer "post_max"
+    t.integer "comment_count"
+    t.integer "comment_max"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -75,4 +86,5 @@ ActiveRecord::Schema.define(version: 2019_02_12_154635) do
 
   add_foreign_key "activities", "users", column: "player_id"
   add_foreign_key "streaks", "activities"
+  add_foreign_key "tasks", "users"
 end
