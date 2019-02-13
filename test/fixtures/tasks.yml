@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post_count: 1
+  post_max: 1
+  comment_count: 1
+  comment_max: 1
+  user: one
+
+two:
+  post_count: 1
+  post_max: 1
+  comment_count: 1
+  comment_max: 1
+  user: two
