@@ -23,6 +23,8 @@ class User < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
-  has_many :friends
+  has_many :tasks
 
+  has_many :friends
+  
 end
