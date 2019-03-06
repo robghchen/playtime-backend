@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_13_150639) do
+ActiveRecord::Schema.define(version: 2019_03_06_205459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,18 @@ ActiveRecord::Schema.define(version: 2019_02_13_150639) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "post_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.integer "price"
+    t.datetime "date"
+    t.string "location"
+    t.string "description"
+    t.string "banner_img"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -61,6 +73,13 @@ ActiveRecord::Schema.define(version: 2019_02_13_150639) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tasks_on_user_id"
+  end
+
+  create_table "user_events", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
