@@ -21,10 +21,19 @@ class User < ApplicationRecord
   has_many :friend_activities, class_name: :Activity, foreign_key: :friend_id
   has_many :friends, through: :friend_activities, source: :friend
 
+
+  # has_many :player_events, class_name: :Event, foreign_key: :player_id
+  # has_many :players, through: :player_events, source: :player
+
+  # has_many :friend_events, class_name: :Event, foreign_key: :friend_id
+  # has_many :friends, through: :friend_events, source: :friend
+
   has_many :comments, dependent: :destroy
 
   has_many :tasks
 
-  has_many :friends
+  has_many :user_events
+  has_many :events, through: :user_events
+
   
 end
