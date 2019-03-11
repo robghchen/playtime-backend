@@ -5,6 +5,7 @@ Activity.destroy_all
 Task.destroy_all
 Event.destroy_all
 UserEvent.destroy_all
+Seat.destroy_all
 
 User.create({first_name:"rob", last_name:"chen", username:"heyitsrob", email:"rob@ert.com",password:"passme",city:"new york", school:"flatiron",work:"coding", lvl:1, exp:0, exp_limit:200, energy:50, max_energy:50, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/2000px-Friends_logo.svg.png"})
 User.create({first_name:"brian", last_name:"horrowitz", username:"imahufflepuff", email:"huffle@puff.com",password:"isawabird",city:"new york", school:"hogwarts",work:"coding", lvl:1, exp:0, exp_limit:200, energy:50, max_energy:50, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/2000px-Friends_logo.svg.png"})
@@ -31,3 +32,12 @@ UserEvent.create({event_id: 1, user_id: 1})
 UserEvent.create({event_id: 1, user_id: 2})
 UserEvent.create({event_id: 1, user_id: 3})
 UserEvent.create({event_id: 1, user_id: 4})
+
+Seat.create({event_id: 1, user_id: 1, position: "J1"})
+Seat.create({event_id: 1, user_id: 2, position: "J2"})
+Seat.create({event_id: 1, user_id: 3, position: "J3"})
+Seat.create({event_id: 1, user_id: 4, position: "J4"})
+Seat.create({event_id: 1, position: "H1"})
+Seat.create({event_id: 1, position: "H2"})
+Seat.create({event_id: 1, position: "H3"})
+Seat.create({event_id: 1, position: "H4"})

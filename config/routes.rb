@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :tasks, only: [:index, :create, :update, :destroy]
       resources :events, only: [:index, :create, :update, :destroy]
       resources :user_events, only: [:index, :create, :update, :destroy]
+      resources :seats, only: [:index, :create, :update, :destroy]
     end
   end
 end
