@@ -25,7 +25,7 @@ Comment.create({user_id:2, post_id:3, comment:"comment 2"})
 Comment.create({user_id:3, post_id:4, comment:"comment 3"})
 Comment.create({user_id:4, post_id:1, comment:"comment 4"})
 
-Event.create({title: "Captain Marvel @ AMC", price: 6, date: DateTime.parse("03/12/2019 6:00"), location: "AMC Empire 25", description: "We'll be meeting at the theatre in the lobby 10 minutes prior to showtime. Message Rob if you have trouble locating the theatre or group. Enjoy the movie! Seats must be reserved in advance and this movie is super hype, so please let me know if you are attending at least 3 days prior to showtime! Otherwise, you might get stuck with a front row seat in the corner alone YIKES!", banner_img: "https://secure.meetupstatic.com/photos/event/9/b/f/f/highres_479139935.jpeg", user_id: 1})
+Event.create({title: "Captain Marvel @ AMC", price: 6, date: DateTime.parse("03/12/2019 6:00"), location: "AMC Empire 25", description: "We'll be meeting at the theatre in the lobby 10 minutes prior to showtime. Message Rob if you have trouble locating the theatre or group. Enjoy the movie! Seats must be reserved in advance and this movie is super hype, so please let me know if you are attending at least 3 days prior to showtime! Otherwise, you might get stuck with a front row seat in the corner alone YIKES!", banner_img: "https://secure.meetupstatic.com/photos/event/9/b/f/f/highres_479139935.jpeg", user_id: 1, event_img:"https://secure.meetupstatic.com/photos/event/5/8/9/e/highres_479122686.jpeg"})
 
 UserEvent.create({event_id: 1, user_id: 1})
 UserEvent.create({event_id: 1, user_id: 2})
