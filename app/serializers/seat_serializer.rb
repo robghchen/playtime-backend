@@ -2,5 +2,5 @@ class SeatSerializer < ActiveModel::Serializer
 
   # belongs_to :event
 
-  attributes :id, :position, :user_id
+  attributes :id, :event_id, :user_id, :position
 end
