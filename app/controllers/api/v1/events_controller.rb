@@ -24,7 +24,9 @@ class Api::V1::EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    render json: { message: “removed” }, status: :ok
+    @events = Event.all
+    render json: @events
+    # render json: { message: “removed” }, status: :ok
   end
 
   private

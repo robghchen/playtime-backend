@@ -7,10 +7,10 @@ Event.destroy_all
 UserEvent.destroy_all
 Seat.destroy_all
 
-User.create({first_name:"rob", last_name:"chen", username:"heyitsrob", email:"rob@ert.com",password:"passme",city:"new york", school:"flatiron",work:"coding", lvl:1, exp:0, exp_limit:180, energy:30, max_energy:30, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
-User.create({first_name:"brian", last_name:"horrowitz", username:"imahufflepuff", email:"huffle@puff.com",password:"isawabird",city:"new york", school:"hogwarts",work:"coding", lvl:1, exp:0, exp_limit:180, energy:30, max_energy:30, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
-User.create({first_name:"raquel", last_name:"randall", username:"dark raquel", email:"dark@raquel.com",password:"glares",city:"new york", school:"flatiron",work:"coding", lvl:1, exp:0, exp_limit:180, energy:30, max_energy:30, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
-User.create({first_name:"amir", last_name:"safoev", username:"voldamir", email:"amir@slytherin.com",password:"slytherin",city:"new york", school:"hogwarts",work:"maybe coding", lvl:1, exp:0, exp_limit:180, energy:30, max_energy:30, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
+User.create({first_name:"rob", last_name:"chen", username:"heyitsrob", email:"rob@ert.com",password:"passme",city:"new york", school:"flatiron",work:"coding", lvl:1, exp:0, exp_limit:200, energy:25, max_energy:25, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
+User.create({first_name:"brian", last_name:"horrowitz", username:"imahufflepuff", email:"huffle@puff.com",password:"isawabird",city:"new york", school:"hogwarts",work:"coding", lvl:1, exp:0, exp_limit:200, energy:25, max_energy:25, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
+User.create({first_name:"raquel", last_name:"randall", username:"dark raquel", email:"dark@raquel.com",password:"glares",city:"new york", school:"flatiron",work:"coding", lvl:1, exp:0, exp_limit:200, energy:25, max_energy:25, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
+User.create({first_name:"amir", last_name:"safoev", username:"voldamir", email:"amir@slytherin.com",password:"slytherin",city:"new york", school:"hogwarts",work:"maybe coding", lvl:1, exp:0, exp_limit:200, energy:25, max_energy:25, speed:1, profile_img: "https://c1.staticflickr.com/6/5643/23778807571_e9649ee35e_b.jpg",cover_img: "https://hbr.org/resources/images/article_assets/2018/10/oct18_26_1040319418.jpg"})
 
 Post.create({player_id:1, friend_id:2, content:"rob posting to brian"})
 Post.create({player_id:2, friend_id:3, content:"brian posting to raquel"})
@@ -19,7 +19,10 @@ Post.create({player_id:4, friend_id:1, content:"amir posting to rob"})
 
 Activity.create({player_id: 1, friend_id: 1, task:"+60 exp, post to heyitsrob on 02/17/19 at 18:17."})
 
+Task.create({user_id: 1, post_count: 0, post_max: 1, comment_count: 0, comment_max: 3})
+Task.create({user_id: 2, post_count: 0, post_max: 1, comment_count: 0, comment_max: 3})
 Task.create({user_id: 3, post_count: 0, post_max: 1, comment_count: 0, comment_max: 3})
+Task.create({user_id: 4, post_count: 0, post_max: 1, comment_count: 0, comment_max: 3})
 
 Comment.create({user_id:1, post_id:2, comment:"comment 1"})
 Comment.create({user_id:2, post_id:3, comment:"comment 2"})
