@@ -9,7 +9,7 @@ class Api::V1::SeatsController < ApplicationController
   end
 
   def create
-    @seat = Seat.create(user_id: params[:user_id], username: params[:username], event_id: params[:event_id], position: params[:position])
+    @seat = Seat.create(event_id: params[:event_id], position: params[:position])
     render json: @seat, status: :accepted
   end
 
