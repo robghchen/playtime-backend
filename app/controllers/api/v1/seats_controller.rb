@@ -9,7 +9,7 @@ class Api::V1::SeatsController < ApplicationController
   end
 
   def create
-    @seat = Seat.create(event_id: params[:event_id], position: params[:position])
+    @seat = Seat.create(event_id: params[:event_id], position: params[:position], ticket_img: params[:ticket_img])
     render json: @seat, status: :accepted
   end
 
@@ -30,7 +30,7 @@ class Api::V1::SeatsController < ApplicationController
   private
 
   def seat_params
-    params.require(:seat).permit(:user_id, :username, :event_id, :position)
+    params.require(:seat).permit(:user_id, :username, :event_id, :position, :ticket_img)
   end
 
   def find_seat
