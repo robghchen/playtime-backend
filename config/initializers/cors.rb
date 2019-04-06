@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://playtime-beta.netlify.com'
+    origins '*'
 
     resource '*',
       headers: :any,
